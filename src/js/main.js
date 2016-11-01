@@ -89,8 +89,6 @@ class Main {
                 success: (data) => {
                     var max = 0;
                     var max_index = 0;
-                    alert(1);
-                    alert(data);
                     for (var j = 0; j < 10; j++) {
                         var value = Math.round(data.results[j] * 1000);
                         if (value > max) {
@@ -107,13 +105,12 @@ class Main {
                         }
                         $('#output tr').eq(j + 1).find('td').text(text);
                     }
-                    alert(2);
                     for (var j = 0; j < 10; j++) {
                         if (j === max_index) {
                             $('#output tr').eq(j + 1).find('td').addClass('success');
                         } else {
                             $('#output tr').eq(j + 1).find('td').removeClass('success');
-                            
+
                         }
                     }
                 }
